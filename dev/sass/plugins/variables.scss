@@ -1,0 +1,103 @@
+//
+//
+// *** Variables ***
+// =================
+//
+// Everything need to know CSS
+// Global variables of all kinds
+//
+$version                : '1.0.0';
+
+
+
+// Road: Grid system
+$width-container		: 75rem;
+$width-wrap			    : 50rem;
+$columns        	    : 12;
+$gutter-width           : 20px;
+$breakpoints            : ((small, 20rem), (medium, 48.25rem), (large, 62rem)) !default;
+$tablet					: nth(nth($breakpoints, 2), 2);
+$mobile				 	: nth(nth($breakpoints, 1), 2);
+$grid--negative		    : false;
+
+
+
+// Road: Base
+$base-radius            : 3px;
+$hero-radius			: 2rem;
+$base-min-space         : 1rem;
+$base-max-space         : 3rem;
+
+
+// Road: Typography
+$Material-icons			: "materialicons";
+$font-IranSans         	: "iransans";
+$font-light             : $font-IranSans, Helvetica, Geneva, Verdana, sans-serif;
+
+$typo-font-weight       : normal;
+$typo-line-height    	: 1.825;
+$typo-font-base         : 16;
+$typo-font-size			: $typo-font-base/ ($typo-font-base * 1) + rem;
+$typo-measure           : $typo-font-base * $typo-line-height;
+$typo-typescale-unit    : rem;
+
+
+$typo-scale             : (
+	type-scale_alpha    : 61.03,
+	type-scale_beta     : 48.82,
+	type-scale_gamma    : 39.06,
+	type-scale_delta    : 31.25,
+	type-scale_epsilon  : 25,
+	type-scale_zeta     : 20,
+) !default;
+
+$typo-headings          : (
+	h1                  : type-scale_alpha,
+	h2                  : type-scale_beta,
+	h3                  : type-scale_gamma,
+	h4                  : type-scale_delta,
+	h5                  : type-scale_epsilon,
+	h6                  : type-scale_zeta
+) !default;
+
+
+
+// Road: Base Colors
+$background             : #FEFEFE;
+
+$navy-dark				: #303645;
+$aqua					: #00ADBC;
+$yellow					: #FFD700;
+$gray-yellow            : #a3b0b1;
+
+$white-gray				: #F1F4F5;
+
+$gray-light				: lighten(#E0E0E0, 2.5);
+$gray					: #BDBDBD;
+$black		      		: #181818;
+$black-light			: mix($gray, $black, 25deg);
+$black-opacify			: rgba(black, .065);
+
+
+
+$palettes: (
+    black: (
+		base    : $black,
+		normal  : #333333,
+		accent  : #4d4d4d,
+		gray    : #757575,
+		light   : #E0E0E0,
+		X-light : #FAFAFA
+    )
+);
+
+
+$colors               	: ( aqua: $aqua, navy: $navy-dark, yellow: $yellow );
+
+
+$facebook_color       	: hsla(222, 47%, 40%, 1);     // #365397
+$twitter_color        	: hsla(198, 100%, 47%, 1);    // #00a9f1
+$linkedin_color       	: hsla(203, 100%, 35%, 1);    // #006db3
+$instagram_color      	: hsla(208, 46%, 41%, 1);     // #396d9a
+
+$social_colors		  	: ( facebook: $facebook_color, twitter: $twitter_color, linkedin: $linkedin_color, instagram: $instagram_color);

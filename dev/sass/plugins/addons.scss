@@ -1,0 +1,118 @@
+$menu-width: 20px; // 25
+.menu--holder {
+	// background-color: $gray-yellow;
+	display: none;
+	// margin-left: 10px;
+	padding: 13px 9px;
+	padding-left: 6px;
+	// border-radius: $base-radius;
+	transition: .125s ease-in-out;
+	cursor: pointer;
+	user-select: none;
+	&:hover, &.active{
+		._line {
+			background-color: $navy-dark;
+		}
+	}
+	// span {
+	// 	color: white;
+	// 	display: inline-block;
+	// 	vertical-align: middle;
+	// }
+}
+.menu--btn {
+	position: relative;
+	display: block;
+	width: $menu-width;
+	height: 16px;
+	._line {
+		position: absolute;
+		left: 0px;
+		width: $menu-width;
+		height: 2px;
+		background-color: $aqua;
+		// transition: .3s ease-in;
+		&:nth-child(1) {
+			top: 0;
+		}
+		&:nth-child(2) {
+			top: 50%;
+		}
+		&:nth-child(3) {
+			top: 100%;
+		}
+	}
+}
+.gmap, .most--hero__cover{
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 27rem;
+	background-color: #f1efea;
+	overflow: hidden;
+	border-bottom: 1px solid darken(#f1efea, 10);
+	box-shadow: 0 0 10px rgba(black, .1);
+	z-index: 0;
+	@extend .hero-image;
+	// img {
+	// 	width: 100%;
+	// }
+}
+
+.most--hero__cover {
+	height: auto;
+	@include aspect-ratio(16, 5);
+	// background-size: cover;
+	// background-position: center center;
+	img{
+		position: relative;
+		display: block;
+		min-width: 100%;
+		height: auto;
+		z-index: 1;
+	}
+}
+
+.pagination {
+    display: table;
+    width: 90%;
+    max-width: 100%;
+    margin: $base-max-space / 1.85777 auto $base-max-space;
+    padding: $base-min-space/2;
+    text-align: center;
+    @media (max-width: 37rem) {
+        width: auto !important;
+    }
+    .page-link {
+        display: inline-block;
+        padding: 5px 12px 3px;
+		margin-left: 0.5em;
+        min-width: 2rem;
+        color: #888;
+        font-weight: 500;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+		border-radius: $base-radius;
+        font-size: .9rem;
+        box-shadow: 0 1px 2px rgba(black, .085);
+        transition: .255s all ease-in-out;
+        // &:first-child{
+        // 	border-radius: 0 $base-radius $base-radius 0;
+        // }
+        // &:last-child{
+        // 	border-left: 1px solid #e5e5e5;
+        // 	border-radius: $base-radius 0 0 $base-radius;
+        // }
+        &.current,
+        &:hover {
+            color: white;
+            background-color: $aqua;
+            border-color: lighten($aqua, 2.5);
+        }
+		&:active{
+			box-shadow: 0 1px 2px rgba(black, .085),
+						0px 2px 6px rgba(0, 0, 0, 0.125) inset;
+		}
+    }
+}

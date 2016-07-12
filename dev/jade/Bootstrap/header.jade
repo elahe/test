@@ -1,0 +1,68 @@
+header.header(class=(mastcover == true ? 'mast--hero-cover' : 'header-top') )
+	nav.snapp--navbar
+		.container
+			.row
+				.pull-right
+					.menu--holder.show-on-small
+						span.menu--btn(data-href="#fullscreen-menu")
+							i._line
+							i._line
+							i._line
+				
+				.pull-right
+					ul.snapp--navbar_menu
+						li
+							a(href="./")
+								img.snapp--logo(src="./dist/img/svg/logo.svg")
+						//- li.hide-on-small
+							//- a(href="#") راهنمای استفاده
+						li.hide-on-small
+							a(href="blog.html") وبلاگ
+						li.hide-on-small
+							a(href="about.html") درباره ما
+						li.hide-on-small
+							a(href="contact.html") تماس با ما
+				
+				.pull-left.hide-on-phone
+					ul.snapp--navbar_menu
+						li
+							a.btn.btn-clone(href="download.html")
+								i.mdi.mdi-ml.mdi-md.mdi-briefcase-download
+								| دریافت اسنپ
+						//- li
+						//- 	a.btn.btn-clone.navy(href="#")
+						//- 		i.mdi.mdi-ml.mdi-md.mdi-account-location
+						//- 		| ورود
+						//- li
+						//- 	a.btn.btn-clone.navy(href="#")
+						//- 		i.mdi.mdi-ml.mdi-md.mdi-key
+						//- 		| ثبت نام
+				
+			.mobile-menu
+				ul
+					//- li
+					//- 	a.snapp(href="download.html") دریافت اسنپ
+					li
+						a(href="blog.html") وبلاگ
+					li
+						a(href="about.html") درباره ما
+					li
+						a(href="contact.html") تماس با ما
+
+	-if(index === true)
+		section.snapp--slider
+			//- .snapp-loader
+			//- 	svg#vector(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 145")
+			//- 		g
+			//- 			path(fill="#04ACBC" d="M81.443 64.222c0 10.053-8.16 18.21-18.223 18.21-10.058 0-18.22-8.157-18.22-18.21C45 54.158 53.162 46 63.22 46c10.065 0 18.224 8.158 18.224 18.222z")
+			//- 			path.path(fill="#324E6A" d="M25.034 63.94c0-21.296 17.27-38.555 38.56-38.555 21.294 0 38.563 17.26 38.563 38.556 0 15.257-8.894 28.41-21.765 34.66l21.074 18.112c16.8-16.646 25.684-33.332 25.72-53.14.034-16.93-6.556-32.862-18.54-44.874C96.6 6.643 80.61 0 63.566 0 28.518 0 0 28.524 0 63.572c0 21.87 10.87 39.972 31.43 58.49 15.413 13.895 30.585 21.242 31.212 21.54l.926.443.947-.443c.465-.215 8.656-4.167 19.055-11.654-31.32-23.232-44.166-37.147-48.195-41.8-6.24-7.023-10.34-16.07-10.34-26.207z")
+			
+			._slides
+				-for(i=0; i<slider.length; i++)
+					figure.slide-item(style="background-image: url(./dist/img/background/slider#{slider[i].id}.jpg);")
+						figcaption.slider-context
+							h2.extra-title= slider[i].title
+
+
+			a.strict-down(href="#introduce")
+				i.mdi.mdi-md.mdi-chevron-down.mdi-light
